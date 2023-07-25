@@ -5,75 +5,178 @@
     <meta name="viewport" content="width=device-width">
     <title>My Link in Bio</title>
 
+    <!-- Connect Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+
+     <!-- Connect Google Font Pair: Cabin & Roboto -->
+     <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+
     <style>
-      body {
-        padding-top: 40px;
-        padding-bottom: 40px;
+    
+      .banner-image {
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+        border-radius: 128px;
       }
 
-    .banner-image {
-      width: 128px;
-      height: 128px;
-      object-fit: cover;
-      border-radius: 128px;
-    }
+      .thumbnail {
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        object-fit: cover;
+      }
 
-    .thumbnail {
-      width: 48px;
-      height: 38px;
-      border-radius: 48px;
-      object-fit: cover;
-    }
+      /* body {
+        background-color: #1C3140;
+      } */
 
-    body {
-      background-color: #b8c1ec;
-    }
+      .name {
+        color: #fffffe;
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 24px;
+        font-weight: bolder;
+      }
 
-    .name {
-      color: #232946;
-    }
+      .social-icons a {
+        color: #fffffe;
+        text-decoration: none;
+      }
 
-    .social-icons a {
-      color: #eebbc3
-      text-decoration: none;
-    }
+      .link {
+        background-color: #FFBAC6;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        border-radius: 30px;
+        font-family: 'Cabin', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        opacity: 0.9;
+
+      }
+
+      .link a {
+        color: #1C3140;
+        text-decoration: none;
+        text-align: center;
+        flex-grow: 1;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      .items {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 640px;
+        flex-grow: 1;
+      }
+
+      .banner {
+        display: flex; 
+        justify-content: center;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: space-around;
+      }
+      path {
+        transform-origin: 50% 0%;
+      }
+      .background--custom {
+        background-color: #C1FFF0;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        top: 0;
+        left: 0;
+      }
+      @keyframes path0 {
+        0% {
+          transform: rotate(-10deg);
+        }
+        100% {
+          transform: rotate(10deg);
+        }
+      }
+      @keyframes path1 {
+        0% {
+          transform: rotate(-30deg);
+        }
+        100% {
+          transform: rotate(30deg);
+        }
+      }
+      @keyframes path2 {
+        0% {
+          transform: rotate(40deg);
+        }
+        100% {
+          transform: rotate(-40deg);
+        }
+      }
     </style>
   </head>
 <body>
-  <div class="banner">
-    <img src="/thumbnails/quarter-life-2.jpg" alt="A. Mompremier Profile Pic" class="banner-image">
-  </div>
+  <svg class="background--custom" id="demo" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path fill="#FFD0CE" fill-opacity="0.7" d="M-100 -100L200 -100L200 50L-100 50Z" style="animation: path0 5s linear infinite alternate;" /><path fill="#00FFFF" fill-opacity="0.7" d="M-100 -100L200 -100L200 50L-100 50Z" style="animation: path1 12.5s linear infinite alternate;" /><path fill="#FF00FF" fill-opacity="0.2" d="M-100 -100L200 -100L200 20L-100 20Z" style="animation: path2 30s linear infinite alternate;" />
+  </svg>
+  <div class="items"> 
+    <div class="banner">
+      <img src="/thumbnails/quarter-life-2.jpg" alt="A. Mompremier Profile Pic" class="banner-image">
+    </div>
 
-  <div class="name">
-    Alexandra Mompremier
-  </div>
+    <div class="name">
+      Alexandra Mompremier
+    </div>
 
-  <div class="social-icons">
-    <a href="https://github.com/ajmompr" target="_blank"> 
-      GitHub
-    </a>
-    <a href="https://dev.to/ajmompr" target="_blank"> 
-      DEV
-    </a>
-    <a href="https://www.linkedin.com/in/alexandra-mompremier" target="_blank"> 
-      LinkedIn
-    </a>
-</div>
+    <div class="social-icons">
+      <div class="social-icon-links">
+      <a href="https://github.com/ajmompr" target="_blank"> 
+        <i class="fa-brands fa-github" style="color: #FFBAC6; width: 40px; height: 40px"></i>
+      </a>
+      
+      </div>
+      <div class="social-icon-links"> 
+        <a href="https://dev.to/ajmompr" target="_blank"> 
+          <i class="fa-brands fa-dev" style="color: #FFBAC6; width: 40px; height: 40px"></i>
+        </a>
+      </div>
+      <div class="social-icon-links">
+        <a href="https://www.linkedin.com/in/alexandra-mompremier" target="_blank"> 
+          <i class="fa-brands fa-linkedin" style="color: #FFBAC6; width: 40px; height: 40px"></i>
+        </a>
+      </div>
+    </div>
     
-    <h4>2023 Essential Listens and Reads</h4>
+      <!-- <h4>2023 Essential Listens and Reads</h4> -->
     <div class="link">  
       <img src="/thumbnails/stick-figure.jpeg" alt="photograph of a stick figure drawing with pen" class="thumbnail">
-      <a href="https://www.npr.org/2022/10/13/1128983339/braving-the-quarterlife-crisis" target="_blank">15 Minute Stick Figure Exercise - Satya Boyle Dock</a>
+      <a href="https://www.npr.org/2022/10/13/1128983339/braving-the-quarterlife-crisis" target="_blank">
+        15 Minute Stick Figure Exercise - Satya Boyle Dock
+      </a>
     </div>
     <div class="link">
       <img src="thumbnails/digital-minimalism.jpg" alt="photograph of laptop computer and plant" class="thumbnail">
-      <a href="https://www.penguinrandomhouse.com/books/575667/digital-minimalism-by-cal-newport/" target="_blank">Digital Minimalism - Cal Newport</a>
-      </div>
+      <a href="https://www.penguinrandomhouse.com/books/575667/digital-minimalism-by-cal-newport/" target="_blank">
+        Digital Minimalism - Cal Newport
+      </a>
+    </div>
     <div class="link">
       <img src="thumbnails/afrominimalist.jpg" alt="afrominimalist thumbnail" class="thumbnail">
-      <a href="https://www.washingtonpost.com/lifestyle/home/live-with-less-afrominimalist-advice/2021/06/14/8007cdac-b1be-11eb-9059-d8176b9e3798_story.html" target="_blank">Afrominimalism - Christine Platt</a>
-</div>
-<div class="link">
+      <a href="https://www.washingtonpost.com/lifestyle/home/live-with-less-afrominimalist-advice/2021/06/14/8007cdac-b1be-11eb-9059-d8176b9e3798_story.html" target="_blank">
+        Afrominimalism - Christine Platt
+      </a>
+    </div>
+    <div class="link">
       <img src="/thumbnails/deep-work-2.jpg" alt="thumbnail of deepwork book by Cal Newport" class="thumbnail">
       <a href="https://calnewport.com/deep-work-rules-for-focused-success-in-a-distracted-world" target="_blank">Deep Work - Cal Newport</a>
     </div>
@@ -83,9 +186,10 @@
     </div>
       
     <div class="link">
-    <img src="/thumbnails/wwc-podcast.png" alt="Yellow Women Who Code podcast logo" class="thumbnail">
+      <img src="/thumbnails/wwc-podcast.png" alt="Yellow Women Who Code podcast logo" class="thumbnail">
       <a href="https://www.womenwhocode.com/blog/career-nav-52-thriving-in-your-tech-career-overcoming-imposter-syndrome/" target="_blank">Women Who Code Podcast</a>
     </div>  
-     
+    
+  </div>     
 </body>
 </html>
